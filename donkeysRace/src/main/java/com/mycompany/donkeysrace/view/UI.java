@@ -118,7 +118,7 @@ public class UI {
             option = Utility.getIntFromUser(scanner);
 
             switch (option) {
-                case 1 -> System.out.println("Sign in");
+                case 1 -> UserAdmin(scanner);
                 case 2 -> System.out.println("Returning with menu...");
                 default -> System.out.println("Invalid option. Please try again.");
             }
