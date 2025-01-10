@@ -1,24 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.donkeysrace.model.classes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author camper
- */
 public class Owner {
     private int idOwner;
     private String ID;
     private String name;
     private List<Donkey> donkeys;
     
+    public Owner(String ID, String name) {
+        this.ID = ID;
+        this.name = name;
+        this.donkeys= new ArrayList<Donkey>();
+    }
+    
     public Owner(int idOwner, String ID, String name) {
-        this.idOwner = idOwner;
         this.ID = ID;
         this.name = name;
         this.donkeys= new ArrayList<Donkey>();

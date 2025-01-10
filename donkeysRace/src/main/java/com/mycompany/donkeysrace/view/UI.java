@@ -1,21 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package com.mycompany.donkeysrace.view;
 
+import com.mycompany.donkeysrace.controller.ControllerOwner;
 import java.awt.BorderLayout;
 import java.util.Scanner;
 
-/**
- *
- * @author camper
- */
 public class UI {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int option = 0;
@@ -54,9 +44,9 @@ public class UI {
             option = Utility.getIntFromUser(scanner);
 
             switch (option) {
-                case 1 -> System.out.println("Sign in");
-                case 2 -> System.out.println("Update");
-                case 3 -> System.out.println("Register");
+                case 1 -> ControllerOwner.add(scanner);
+                case 2 -> ControllerOwner.update(scanner);
+                case 3 -> ControllerOwner.list().forEach(System.out::println);
                 case 4 -> System.out.println("Delete");
                 case 5 -> System.out.println("List");
                 case 6 -> System.out.println("Returning with menu...");
